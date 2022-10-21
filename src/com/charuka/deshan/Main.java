@@ -6,16 +6,10 @@ package com.charuka.deshan;
  **/
 public class Main {
     public static void main(String[] args) {
-
-        int baseSalary = 50_000;
-        byte hourlyRate = 20;
-        byte extraHours = 10;
-
-        int wage = calculateSalary(baseSalary,hourlyRate,extraHours);
+        var employee = new Employee();
+        employee.baseSalary=50_000;
+        employee.hourlyRate=20;
+        int wage = employee.calculateWage(10);
         System.out.println(wage);
-    }
-
-    public static int calculateSalary(int salary,int hourlyRate,int extraHours){
-        return salary + (hourlyRate * extraHours);
     }
 }
