@@ -5,7 +5,7 @@ package com.charuka.deshan;
  * @since : 2022-10-21
  **/
 public class TextBox {
-    public String text;
+    public String text = "";
 
     public void setText(String text) {
         this.text = text;
