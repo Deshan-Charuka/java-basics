@@ -5,15 +5,22 @@ package com.charuka.deshan;
  * @since : 2022-10-22
  **/
 public class Employee {
+    private static int numberOfEmployees;
     private int baseSalary;
     private int hourlyRate;
 
-    public Employee(int baseSalary){
-        this(baseSalary,0);
+    public Employee(int baseSalary) {
+        this(baseSalary, 0);
     }
-    public Employee(int baseSalary,int hourlyRate){
+
+    public Employee(int baseSalary, int hourlyRate) {
         setBaseSalary(baseSalary);
         setHourlyRate(hourlyRate);
+        numberOfEmployees++;
+    }
+
+    public static void showNumberOfEmployees() {
+        System.out.println(numberOfEmployees);
     }
 
     private int getBaseSalary() {
@@ -37,6 +44,7 @@ public class Employee {
     public int calculateWage(int extraHours) {
         return baseSalary + (hourlyRate * extraHours);
     }
+
     public int calculateWage() {
         return calculateWage(0);
     }
