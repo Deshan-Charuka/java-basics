@@ -8,11 +8,16 @@ public class Employee {
     private int baseSalary;
     private int hourlyRate;
 
+    public Employee(int baseSalary,int hourlyRate){
+        setBaseSalary(baseSalary);
+        setHourlyRate(hourlyRate);
+    }
+
     private int getBaseSalary() {
         return baseSalary;
     }
 
-    public void setBaseSalary(int baseSalary) {
+    private void setBaseSalary(int baseSalary) {
         if (baseSalary < 0) throw new IllegalArgumentException("Salary should be larger than zero!!");
         this.baseSalary = baseSalary;
     }
@@ -21,7 +26,7 @@ public class Employee {
         return hourlyRate;
     }
 
-    public void setHourlyRate(int hourlyRate) {
+    private void setHourlyRate(int hourlyRate) {
         if (hourlyRate < 0) throw new IllegalArgumentException("Hourly Rate should be larger than zero!!");
         this.hourlyRate = hourlyRate;
     }
